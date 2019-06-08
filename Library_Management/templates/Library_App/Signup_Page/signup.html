@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static "Signuppage/fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "Signuppage/css/style.css" %}">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+
+                        {% if registered %}
+                        <h2 class="form-title">Thank You For Registering</h2>
+                        {% else %}
+                        <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                            <h2 class="form-title">Create account</h2>
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ user_form.as_p }}
+                            {{ profile_form.as_p }}
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="submit"/>
+                        </div>
+                    </form>
+                    {% endif %}
+                    <p class="loginhere">
+                        Have already an account ? <a href={% url "libapp:user_login" %} class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static "Signuppage/vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "Signuppage/js/main.js" %}"></script>
+</body>
+</html>

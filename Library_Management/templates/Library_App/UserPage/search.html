@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>Search Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static "UserPage/css/bootstrap.min.css" %}" rel="stylesheet">
+  <!-- bootstrap theme -->
+  <link href="{% static "UserPage/css/bootstrap-theme.css" %}" rel="stylesheet">
+  <!--external css-->
+  <!-- font icon -->
+  <link href="{% static "UserPage/css/elegant-icons-style.css" %}" rel="stylesheet" />
+  <link href="{% static "UserPage/css/font-awesome.min.css" %}" rel="stylesheet" />
+  <!-- Custom styles -->
+  <link href="{% static "UserPage/css/style.css" %}" rel="stylesheet">
+  <link href="{% static "UserPage/css/style-responsive.css" %}" rel="stylesheet" />
+
+  <style>
+b.font_heading{
+  font : 15px arial, sans-serif ;
+  color : darkblue;
+}
+  </style>
+</head>
+
+<body>
+  <!-- container section start -->
+  <section id="container" class="">
+    <!--header start-->
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a  class="logo"> <span class="lite">Books</span></a>
+      <!--logo end-->
+
+
+
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-right top-menu">
+
+          <!-- task notificatoin start -->
+
+          <!-- inbox notificatoin end -->
+          <!-- alert notification start-->
+
+
+          <!-- alert notification end-->
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src="{{ user.userprofileinfo.profile_pic.url }}" width ="40">
+                            </span>
+                            <span class="username">  {{ user.first_name}}  {{ user.last_name}}</span>
+                            <b class="caret"></b>
+                        </a>
+            <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+              <li class="eborder-top">
+                <a href="{%url 'libapp:profile'%}"><i class="icon_profile"></i> MY PROFILE</a>
+              </li>
+
+              <li>
+                <a href="{% url 'logout' %}"><i class="icon_key_alt"></i> Log Out</a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+        <!-- notificatoin dropdown end-->
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="">
+            <a class="" href="{%url 'libapp:special'%}">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+          </li>
+
+          <li class="sub-menu ">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>Pages</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="{%url 'libapp:profile'%}">Profile</a></li>
+              <li><a class="" href="{%url 'libapp:contact'%}"><span>Contact Page</span></a></li>
+              <li><a class="" href="{%url 'libapp:viewbook'%}"><span>Book</span></a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa fa-bars"></i> Search</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="{%url 'libapp:special'%}">Home</a></li>
+              <li><i class="fa fa-bars"></i>Pages</li>
+              <li><i class="fa fa-book"></i>Search</li>
+            </ol>
+          </div>
+        </div>
+        <!-- page start-->
+        <div class="col-lg-8">
+          <!--Project Activity start-->
+          <section class="panel">
+            <div class="panel-body progress-panel">
+              <div class="row">
+                <div class="col-lg-8 task-progress pull-left">
+                  <h1>Book Search</h1>
+                </div>
+
+              </div>
+            </div>
+            <form method="get">
+    <div class="well">
+
+      <div class="row">
+        <div class="form-group col-sm-4 col-md-3">
+
+
+          {{ booksearch.form.as_p }}
+          <button type="submit" class="btn btn-primary">
+            <span class="fa fa-search"></span> Search
+          </button>
+        </div>
+          </div>
+        </div>
+  </form>
+
+            <table class="table table-hover personal-task">
+              <tbody>
+                <tr>
+                  <td><b class="font_heading">Book Name</b></td>
+                  <td><b class="font_heading">Author</b></td>
+                  <td><b class="font_heading">Genre</b></td>
+                  <td><b class="font_heading">Edition</b></td>
+                  <td><b class="font_heading">Language</b></td>
+                  <td><b class="font_heading">Availability</b></td>
+                </tr>
+                {% for user in booksearch.qs %}
+                <tr>
+                  <td>{{user.name}}</td>
+                  <td>{{user.author}}</td>
+                  <td>{{user.genre}}</td>
+                  <td>{{user.edition}}</td>
+                  <td>{{user.language}}</td>
+                  <td>{{user.Bookinstance.status}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </section>
+          <!--Project Activity end-->
+        </div>
+      </div><br><br>
+  </section>
+        <!-- page end-->
+      </section>
+    </section>
+    <!--main content end-->
+
+  </section>
+  <!-- container section end -->
+  <!-- javascripts -->
+  <script src="{% static "UserPage/js/jquery.js" %}"></script>
+  <script src="{% static "UserPage/js/bootstrap.min.js" %}"></script>
+  <!-- nice scroll -->
+  <script src="{% static "UserPage/js/jquery.scrollTo.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "UserPage/js/jquery.nicescroll.js" %}" ></script>
+  <!--custome script for all page-->
+  <script src="{% static "UserPage/js/scripts.js" %}"></script>
+
+
+</body>
+
+</html>

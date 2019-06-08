@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <title>Library  Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+    <link rel="stylesheet" href="{% static "Indexpage/fonts/icomoon/style.css" %}" />
+
+    <link rel="stylesheet" href="{% static "Indexpage/css/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "Indexpage/css/magnific-popup.css" %}" />
+    <link rel="stylesheet" href="{% static "Indexpage/css/jquery-ui.css" %}" />
+    <link rel="stylesheet" href="{% static "Indexpage/css/owl.carousel.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "Indexpage/css/owl.theme.default.min.css" %}" />
+
+    <link rel="stylesheet" href="{% static "Indexpage/css/bootstrap-datepicker.css" %}" />
+
+    <link rel="stylesheet" href="{% static "Indexpage/fonts/flaticon/font/flaticon.css" %} />
+
+
+
+    <link rel="stylesheet" href="{% static "Indexpage/css/aos.css" %}"/>
+
+    <link rel="stylesheet" href="{% static "Indexpage/css/style.css" %}" />
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+  <!-- <div class="site-wrap"> -->
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-11 col-xl-2 site-logo">
+            <h1 class="mb-0"><a href="{% url 'libapp:index' %}" class="text-white h2 mb-0">HOMEPAGE</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                <li><a href="#section-home" class="nav-link">Home</a></li>
+                <li class="has-children">
+                  <a href="#section-about" class="nav-link">About Us</a>
+                  <ul class="dropdown">
+                      <li><a href="#section-how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#section-our-team" class="nav-link">Our Team</a></li>
+                  </ul>
+                </li>
+                <li><a href="#section-Update" class="nav-link">Updates</a></li>
+                <li><a href="#section-contact" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url({% static "Indexpage/images/hero_bg_2.jpg" %});" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+
+
+            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">We Educate students</h1>
+            <p class="mb-5" data-aos="fade-up" data-aos-delay="100"></p>
+            <p data-aos="fade-up" data-aos-delay="200"><a href="{% url "libapp:user_login" %}" class="btn btn-primary py-3 px-5 text-white">LOGIN</a></p>
+            <p data-aos="fade-up" data-aos-delay="200"><a href="{% url "libapp:register" %}" class="btn btn-primary py-3 px-5 text-white">SIGN UP</a></p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" id="section-about">
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static "Indexpage/images/aboutus.png" alt="Image" class="img-fluid rounded" %}"/>
+          </div>
+          <div class="col-md-6 order-md-1" data-aos="fade-up">
+            <div class="text-left pb-1 border-primary mb-4">
+              <h2 class="text-primary">About Us</h2>
+            </div>
+            <p>Heading</p>
+            <p class="mb-5">BLA BLA BLA</p>
+
+            <ul class="ul-check list-unstyled success">
+              <li>BLA BLA BLA</li>
+              <li>BLA BLA BLA</li>
+              <li>BLA BLA BLA</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-image overlay" style="background-image: url({% static 'Indexpage/images/hero_bg_4.jpg' %} );" id="section-how-it-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">How It Works</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="how-it-work-item">
+              <span class="number">1</span>
+              <div class="how-it-work-body">
+                <h2>Search a book</h2>
+                <p class="mb-5">BLA BLA BLA</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="how-it-work-item">
+              <span class="number">2</span>
+              <div class="how-it-work-body">
+                <h2>Check For Availability</h2>
+                <p class="mb-5">BLA BLA BLA</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item">
+              <span class="number">3</span>
+              <div class="how-it-work-body">
+                <h2>Collect</h2>
+                <p class="mb-5">BLA BLA BLA</p>
+                <ul class="ul-check list-unstyled success">
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                  <li class="text-white">BLA BLA BLA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section border-bottom" id="section-our-team">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">Our Team</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-lg-6 mb-7 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="person">
+              <img src="{% static "Indexpage/images/0.jpg"%}" "alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle" />
+              <h3>Gunjan Kadu</h3>
+              <p class="mb-4">BLA BLA BLA</p>
+              <ul class="ul-social-circle">
+                <li><a href="https://www.facebook.com/gunjan.kadu.902"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.linkedin.com/in/gunjankadu"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6 mb-7 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="person">
+                <img src="{% static "Indexpage/images/0.jpg"%}" "alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle" />
+              <h3>Adarsh Mayya</h3>
+              <p class="mb-4">BLA BLA BLA</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6 mb-7 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="person">
+                <img src="{% static "Indexpage/images/0.jpg"%}" "alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle" />
+              <h3>Varsha Venugopal</h3>
+              <p class="mb-4">BLA BLA BLA</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6 mb-7 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="person">
+                <img src="{% static "Indexpage/images/0.jpg"%}" "alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle" />
+              <h3>Akshay Raul</h3>
+              <p class="mb-4">BLA BLA BLA</p>
+              <ul class="ul-social-circle">
+                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="site-section block-13" id="section-industries">
+
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-0 text-primary">Our Library</h2>
+            <p class="color-black-opacity-5">We Educate Students</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="owl-carousel nonloop-block-13">
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="{% static "Indexpage/images/our1.jpg" %}" "alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Leisure Time</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="{% static "Indexpage/images/our2.jpg" %}" "alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Books</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="{% static "Indexpage/images/our3.jpg" %}" "alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Meeting Room</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="{% static "Indexpage/images/our4.jpg" %}" "alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Library View</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="{% static "Indexpage/images/our4.jpg" %}" "alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Library</h3>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class="site-section border-bottom"id="section-Update">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Updates</h2>
+          </div>
+        </div>
+
+        <div class="slide-one-item home-slider owl-carousel">
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="" alt="Image" class="img-fluid mb-3">
+
+              </figure>
+              <blockquote>
+                <p></p>
+                <p class="author"> &mdash; Book 1</p>
+              </blockquote>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="" alt="Image" class="img-fluid mb-3">
+
+              </figure>
+              <blockquote>
+                <p></p>
+                <p class="author"> &mdash; Book 2</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="" alt="Image" class="img-fluid mb-3">
+              </figure>
+              <blockquote>
+                <p></p>
+                <p class="author"> &mdash; Book 3</p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+              <figure class="mb-4">
+                <img src="" alt="Image" class="img-fluid mb-3">
+              </figure>
+              <blockquote>
+                <p></p>
+                <p class="author"> &mdash; Book 4</p>
+              </blockquote>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Contact Us</h2>
+            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+
+
+            <form action="#" class="p-5 bg-white">
+
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="col-md-5">
+
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">Ludwig-Guttmann-Straße 6, 69123 Heidelberg</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4">+49 172 8290050</a></p>
+
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="https://www.hochschule-heidelberg.de/de/startseite/">info@hochschule-heidelberg.de</a></p>
+
+            </div>
+
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">More Info</h3>
+              <p>BLA BLA BLA</p>
+              <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5 mr-auto">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>BLA BLA BLA</p>
+              </div>
+
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#section-about">About Us</a></li>
+                  <li><a href="#section-industries">Our Library</a></li>
+                  <li><a href="#section-Update">Updates</a></li>
+                  <li><a href="#section-contact">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="https://www.facebook.com/pg/SRHHochschuleHD/reviews/" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/srhhochschulehd?lang=en" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/hsheidelberg/?hl=en" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/school/srh-hochschule-heidelberg/" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+              <small class="block">&copy; <script>document.write(new Date().getFullYear());</script>  All Rights Reserved. <br> Designed &amp; Developed by <a href="https://www.linkedin.com/in/gunjankadu" target="_blank">Gunjan Kadu</a></small>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  <!-- </div> -->
+
+  <script src="{% static "Indexpage/js/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery-ui.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "Indexpage/js/popper.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery.countdown.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/bootstrap-datepicker.min.js" %}"></script>
+  <script src="{% static "Indexpage/js/aos.js" %}"></script>
+
+  <script src="{% static "Indexpage/js/main.js" %}"></script>
+
+  </body>
+</html>
